@@ -54,3 +54,23 @@ void Isorting(int a[],int N, int &Imoves){
     }//i
     display(a,N);
 }
+
+//-------------------------------------------------------------------
+void generateSortedData(int a[], int N) {
+    for (int i = 0; i < N; ++i) {
+        a[i] = i;
+    }
+}
+
+void generateReverseSortedData(int a[], int N) {
+    for (int i = 0; i < N; ++i) {
+        a[i] = N - i - 1;
+    }
+}
+
+void generateRandomData(int a[], int N) {
+    srand(time(0));
+    for (int i = 0; i < N; ++i) {
+        a[i] = rand() % 1000; // Generating random numbers between 0 and 999
+    }
+}

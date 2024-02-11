@@ -41,7 +41,7 @@ int main(int argc, char *argv[]) {
 
     cout<<"Time taken by the program: ";
     std::cout << std::chrono::duration_cast<std::chrono::milliseconds>(done-started).count();
-    cout<<" sec";
+    cout<<" ms";
     
     return 0;
 }

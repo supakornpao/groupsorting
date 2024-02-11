@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstring>
+#include <chrono>
 using namespace std;
 #include <stdlib.h>
 #include "sorting.h"
@@ -7,7 +8,7 @@ using namespace std;
 int main(int argc, char *argv[]) {
     
  
-  cout<<"argc is "<<argc<<endl;
+    cout<<"argc is "<<argc<<endl;
     int i,N=argc-2;
     int Bmoves=0,Smoves=0,Imoves=0;
     int *a= new int[N];
@@ -16,12 +17,15 @@ int main(int argc, char *argv[]) {
         a[i-2] = atoi(argv[i]);
     }
 
-     if(strcmp(argv[1],"bubble")==0){
+    auto started = std::chrono::high_resolution_clock::now();
+
+
+    if(strcmp(argv[1],"bubble")==0){
         cout << "Bubble Sort:" << endl;
         Bsorting(a,N,Bmoves);
-        cout<<"bubble's number of moves :"<<Bmoves<<endl;
+        cout<<"Bubble's number of moves :"<<Bmoves<<endl;
       }
-       if (strcmp(argv[1],"selection")==0){
+    if (strcmp(argv[1],"selection")==0){
          cout << "Selection Sort:" << endl;
         Ssorting(a,N,Smoves);
         cout<<"Selection's number of moves :"<<Smoves<<endl;
@@ -31,22 +35,13 @@ int main(int argc, char *argv[]) {
         Isorting(a,N,Imoves);
         cout<<"Insertion's number of moves :"<<Imoves<<endl;
       }
+    
    
-  
-  
-  /*
-  cout<<"Bsorting"<<endl;
-    Bsorting(a,N,Bmoves);
-    cout<<"bubble's number moves :"<<Bmoves<<endl;
+    auto done = std::chrono::high_resolution_clock::now();
 
-  cout<<"Ssorting"<<endl;
-    Ssorting(a,N,Smoves);
-    cout<<"select's number moves :"<<Smoves<<endl;
-
-  cout<<"Isorting"<<endl;
-    Isorting(a,N,Imoves);
-    cout<<"insert's number moves :"<<Imoves<<endl;
-    */
+    cout<<"Time taken by the program: ";
+    std::cout << std::chrono::duration_cast<std::chrono::milliseconds>(done-started).count();
+    cout<<" sec";
     
     return 0;
 }

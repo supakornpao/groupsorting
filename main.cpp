@@ -12,8 +12,7 @@ int main(int argc, char *argv[]) {
     int i,N=argc-2;
     int Bmoves=0,Smoves=0,Imoves=0;
     int *a= new int[N];
-    for(i=2;i<argc;i++){
-        cout<<"argv[" << i<<"]" <<argv[i]<<endl;
+    for(i=2;i<argc;i++)
         a[i-2] = atoi(argv[i]);
     }
 

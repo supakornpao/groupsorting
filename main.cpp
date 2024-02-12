@@ -40,12 +40,12 @@ int main(int argc, char *argv[]) {
     
     auto done = std::chrono::high_resolution_clock::now();
 
-    display(a,N);
 
     auto duration = std::chrono::duration_cast<std::chrono::nanoseconds>(done-started); //time difference calculation (nanoseconds)
 
     cout<<"Time taken by the program: ";
     double sorting_time = duration.count()*0.000001; //from ns to ms
+    display(a,N);
 
 
     cout<<sorting_time<<" ms"<<endl;

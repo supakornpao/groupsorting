@@ -19,17 +19,17 @@ int main(int argc, char *argv[]) {
     auto started = std::chrono::high_resolution_clock::now();
 
     if(strcmp(argv[1],"bubble")==0){
-        cout << "Bubble Sort:" << endl;
+        cout << "======Bubble Sort======" << endl;
         Bsorting(a,N,Bmoves);
         cout<<"Bubble's number of moves :"<<Bmoves<<endl;
     }
     else if(strcmp(argv[1],"selection")==0){
-         cout << "Selection Sort:" << endl;
+         cout << "======Selection Sort======" << endl;
         Ssorting(a,N,Smoves);
         cout<<"Selection's number of moves :"<<Smoves<<endl;
     }
     else if(strcmp(argv[1],"insertion")==0){
-         cout << "Insertion Sort:" << endl;
+         cout << "======Insertion Sort======" << endl;
         Isorting(a,N,Imoves);
         cout<<"Insertion's number of moves :"<<Imoves<<endl;
     }

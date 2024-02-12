@@ -40,10 +40,13 @@ int main(int argc, char *argv[]) {
 
     display(a,N);
 
+    auto duration = std::chrono::duration_cast<std::chrono::nanoseconds>(done-started); //time difference calculation
 
     cout<<"Time taken by the program: ";
-    std::cout << std::chrono::duration_cast<std::chrono::nanoseconds>(done-started).count();
-    cout<<" ms"<<endl;
+    double sorting_time = duration.count()*0.000001; //from ms to ns
+
+
+    cout<<sorting_time<<" nanoseconds"<<endl;
     
     return 0;
 }

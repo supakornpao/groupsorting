@@ -46,7 +46,7 @@ int main(int argc, char *argv[]) {
     double sorting_time = duration.count()*0.000001; //from ns to ms
 
 
-    cout<<sorting_time<<" nanoseconds"<<endl;
+    cout<<sorting_time<<" ms"<<endl;
     
     return 0;
 }

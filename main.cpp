@@ -35,7 +35,6 @@ int main(int argc, char *argv[]) {
     }
     else {
       cout<<"This sorting algorithm does not exist in this program"<<endl; 
-      break;
     }
     
     

@@ -33,12 +33,16 @@ int main(int argc, char *argv[]) {
         Isorting(a,N,Imoves);
         cout<<"Insertion's number of moves :"<<Imoves<<endl;
     }
+    else cout<<"This sorting algorithm does not exist in this program"<<endl;
     
-   
+    
     auto done = std::chrono::high_resolution_clock::now();
 
+    display(a,N);
+
+
     cout<<"Time taken by the program: ";
-    std::cout << std::chrono::duration_cast<std::chrono::milliseconds>(done-started).count();
+    std::cout << std::chrono::duration_cast<std::chrono::nanoseconds>(done-started).count();
     cout<<" ms"<<endl;
     
     return 0;

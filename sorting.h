@@ -14,12 +14,11 @@ void swap(int &x, int &y){
 void Bsorting(int a[], int N, int &Bmoves){
 
     int i,j;
-for(i=N-1;i>=0;i--){
-    for(j=0;j<N-1;j++){
-        if(a[j] > a[j+1]) {swap(a[j],a[j+1]); Bmoves++;}
+    for(i=N-1;i>=0;i--){
+        for(j=0;j<N-1;j++){
+            if(a[j] > a[j+1]) {swap(a[j],a[j+1]); Bmoves++;}
+        }
     }
-}
-display(a,N);
 }
 
 void Ssorting(int a[], int N, int &Smoves){
@@ -38,7 +37,6 @@ void Ssorting(int a[], int N, int &Smoves){
     } //i
 
     } //j
-    display(a,N);
 }
 
 void Isorting(int a[],int N, int &Imoves){
@@ -53,5 +51,4 @@ void Isorting(int a[],int N, int &Imoves){
         if(a[j+1]!=v) Imoves++;
         a[j+1]=v;
     }//i
-    display(a,N);
 }

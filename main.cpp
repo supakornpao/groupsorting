@@ -49,6 +49,7 @@ int main(int argc, char *argv[]) {
 
 
     cout<<sorting_time<<" ms"<<endl;
+    delete[] a;
     
     return 0;
 }

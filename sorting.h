@@ -48,7 +48,6 @@ void Isorting(int a[],int N, int &Imoves){
                 if(a[j]>v) { a[j+1]=a[j]; Imoves++; }
                 else break;
         }//j
-        if(a[j+1]!=v) Imoves++;
         a[j+1]=v;
     }//i
 }

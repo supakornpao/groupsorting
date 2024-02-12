@@ -45,10 +45,10 @@ int main(int argc, char *argv[]) {
 
     cout<<"Time taken by the program: ";
     double sorting_time = duration.count()*0.000001; //from ns to ms
+    cout<<sorting_time<<" ms"<<endl;
+    
     display(a,N);
 
-
-    cout<<sorting_time<<" ms"<<endl;
     delete[] a;
     
     return 0;

@@ -33,7 +33,10 @@ int main(int argc, char *argv[]) {
         Isorting(a,N,Imoves);
         cout<<"Insertion's number of moves :"<<Imoves<<endl;
     }
-    else cout<<"This sorting algorithm does not exist in this program"<<endl;
+    else {
+      cout<<"This sorting algorithm does not exist in this program"<<endl; 
+      break;
+    }
     
     
     auto done = std::chrono::high_resolution_clock::now();

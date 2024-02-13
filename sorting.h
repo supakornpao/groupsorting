@@ -73,6 +73,8 @@ void heapify(int a[], int N, int i)
     if (largest != i) {
         swap(a[i], a[largest]);
         // Recursively heapify the affected sub-tree
+
+        display(a,N);
         heapify(a, N, largest);
     }
 }

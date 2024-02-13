@@ -16,8 +16,6 @@ int main(int argc, char *argv[]) {
         a[i-2] = atoi(argv[i]);
     }
 
-    int n = sizeof(a) / sizeof(a[0]);
-
     auto started = std::chrono::high_resolution_clock::now();
 
     if(strcmp(argv[1],"bubble")==0){
@@ -42,7 +40,6 @@ int main(int argc, char *argv[]) {
          }
         heapSort(a, N);
     }
-
     else {
       cout<<"This sorting algorithm does not exist in this program"<<endl; 
     }

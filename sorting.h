@@ -33,10 +33,10 @@ void Ssorting(int a[], int N, int &Smoves){
             min=a[i]; m=i;
         } //if
         swap(a[m],a[j]);
-        Smoves++;
-        display(a,N);
+        
     } //i
-
+    Smoves++;
+    display(a,N);
     } //j
 }
 

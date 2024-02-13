@@ -37,10 +37,10 @@ int main(int argc, char *argv[]) {
     }
     else if(strcmp(argv[1],"heap")==0){
          cout << "======Heap Sort======"<<endl;
-         for(int i=n/2 -1;i>=0;i--){
-            heapify(a,n,i);
-        }
-        heapSort(a, n);
+         for(int i=N/2 -1;i>=0;i--){
+            heapify(a,N,i);
+         }
+        heapSort(a, N);
     }
 
     else {

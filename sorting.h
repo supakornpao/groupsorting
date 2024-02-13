@@ -52,18 +52,18 @@ void Isorting(int a[],int N, int &Imoves){
     }//i
 }
 
-void heapify(int a[], int n, int i)
+void heapify(int a[], int N, int i)
 {
     int largest = i; // Initialize largest as root Since we are using 0 based indexing
     int l = 2 * i + 1; // left = 2*i + 1
     int r = 2 * i + 2; // right = 2*i + 2
  
     // If left child is larger than root
-    if (l < n && a[l] > a[largest])
+    if (l < N && a[l] > a[largest])
         largest = l;
  
     // If right child is larger than largest so far
-    if (r < n && a[r] > a[largest])
+    if (r < N && a[r] > a[largest])
         largest = r;
  
     // If largest is not root
@@ -71,18 +71,18 @@ void heapify(int a[], int n, int i)
         swap(a[i], a[largest]);
  
         // Recursively heapify the affected sub-tree
-        heapify(a, n, largest);
+        heapify(a, N, largest);
     }
 }
 
-void heapSort(int a[], int n)
+void heapSort(int a[], int N)
 {
     // Build heap (rearrange array)
-    for (int i = n / 2 - 1; i >= 0; i--)
-        heapify(a, n, i);
+    for (int i = N / 2 - 1; i >= 0; i--)
+        heapify(a, N, i);
  
     // One by one extract an element from heap
-    for (int i = n - 1; i >= 0; i--) {
+    for (int i = N - 1; i >= 0; i--) {
         // Move current root to end
         swap(a[0], a[i]);
  

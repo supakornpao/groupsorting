@@ -73,7 +73,7 @@ void heapify(int a[], int N, int i)
     if (largest != i) {
         swap(a[i], a[largest]);
         // Recursively heapify the affected sub-tree
-
+        display(a,N);
         
         heapify(a, N, largest);
     }
@@ -89,7 +89,7 @@ void heapSort(int a[], int N)
     for (int i = N - 1; i >= 0; i--) {
         // Move current root to end
         swap(a[0], a[i]);
-        
+        display(a,N);
         // call max heapify on the reduced heap
         heapify(a, i, 0);
     }

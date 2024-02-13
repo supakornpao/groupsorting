@@ -24,7 +24,7 @@ void Bsorting(int a[], int N, int &Bmoves){
 void Ssorting(int a[], int N, int &Smoves){
 
     int i,j,min,m;
-    for(j=0;j<N-1;j++){
+    for(j=0;j<N;j++){
         
     for(i=j+1;i<N;i++){
         min=a[j];

@@ -16,7 +16,7 @@ void Bsorting(int a[], int N, int &Bmoves){
     int i,j;
     for(i=N-1;i>=0;i--){
         for(j=0;j<N-1;j++){
-            if(a[j] > a[j+1]) {swap(a[j],a[j+1]); Bmoves++; }
+            if(a[j] > a[j+1]) {swap(a[j],a[j+1]); Bmoves++; display(a,N);}
         }
     }
 }
@@ -51,7 +51,8 @@ void Isorting(int a[],int N, int &Imoves){
                 else break;
         }//j
         a[j+1]=v;
-        Imoves++; 
+        Imoves++;
+        display(a,N);
         
     }//i
 }

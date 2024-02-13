@@ -16,6 +16,8 @@ int main(int argc, char *argv[]) {
         a[i-2] = atoi(argv[i]);
     }
 
+    int n = sizeof(a) / sizeof(a[0]);
+
     auto started = std::chrono::high_resolution_clock::now();
 
     if(strcmp(argv[1],"bubble")==0){
@@ -33,6 +35,14 @@ int main(int argc, char *argv[]) {
         Isorting(a,N,Imoves);
         cout<<"Insertion's number of moves :"<<Imoves<<endl;
     }
+    else if(strcmp(argv[1],"heap")==0){
+         cout << "======Heap Sort======"<<endl;
+         for(int i=n/2 -1;i>=0;i--){
+            heapify(a,n,i);
+        }
+        heapSort(a, n);
+    }
+
     else {
       cout<<"This sorting algorithm does not exist in this program"<<endl; 
     }

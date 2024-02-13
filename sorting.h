@@ -46,10 +46,11 @@ void Isorting(int a[],int N, int &Imoves){
     for(i=1;i<N;i++){
         v=a[i];
          for(j=i-1;j>=0;j--){
-                if(a[j]>v) { a[j+1]=a[j]; Imoves++; }
+                if(a[j]>v) { a[j+1]=a[j];}
                 else break;
         }//j
         a[j+1]=v;
+        Imoves++; 
         display(a,N);
     }//i
 }

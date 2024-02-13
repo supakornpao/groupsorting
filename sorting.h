@@ -16,7 +16,7 @@ void Bsorting(int a[], int N, int &Bmoves){
     int i,j;
     for(i=N-1;i>=0;i--){
         for(j=0;j<N-1;j++){
-            if(a[j] > a[j+1]) {swap(a[j],a[j+1]); Bmoves++; display(a,N);}
+            if(a[j] > a[j+1]) {swap(a[j],a[j+1]); Bmoves++; //display(a,N);}
         }
     }
 }
@@ -36,7 +36,7 @@ void Ssorting(int a[], int N, int &Smoves){
         
     } //i
     Smoves++;
-    display(a,N);
+    //display(a,N);
     } //j
 }
 
@@ -51,7 +51,7 @@ void Isorting(int a[],int N, int &Imoves){
         }//j
         a[j+1]=v;
         Imoves++; 
-        display(a,N);
+        //display(a,N);
     }//i
 }
 
@@ -74,7 +74,7 @@ void heapify(int a[], int N, int i)
         swap(a[i], a[largest]);
         // Recursively heapify the affected sub-tree
 
-        display(a,N);
+        //display(a,N);
         heapify(a, N, largest);
     }
 }
@@ -89,7 +89,7 @@ void heapSort(int a[], int N)
     for (int i = N - 1; i >= 0; i--) {
         // Move current root to end
         swap(a[0], a[i]);
-        display(a,N);
+        //display(a,N);
         // call max heapify on the reduced heap
         heapify(a, i, 0);
     }

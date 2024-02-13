@@ -68,7 +68,7 @@ void heapify(int a[], int n, int i)
  
     // If largest is not root
     if (largest != i) {
-        swap(a[i], arr[largest]);
+        swap(a[i], a[largest]);
  
         // Recursively heapify the affected sub-tree
         heapify(a, n, largest);
